@@ -19,6 +19,7 @@ class HSZCOMPANY(Base):
     ztId=Column(String(50))
     id_num=Column(String(50))
     headers=Column(String(1000))
+    state=Column(String(20))
     endkjqj=Column(String(20))
     eventuallykjqj=Column(String(20))
     startkjqj=Column(String(20))

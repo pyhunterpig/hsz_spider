@@ -1,6 +1,6 @@
 # -*- coding:utf-8 -*-
 import typing
-
+from urllib import parse
 import mitmproxy.addonmanager
 import mitmproxy.connections
 import mitmproxy.http
@@ -64,15 +64,18 @@ class Proxy(classification_deal):
         """
         # request_header=eval(dict(flow.request.headers)['request_header'])
         '''获取请求详细信息'''
+        print(flow.request.url,'好累啊')
         if 'useridx' in flow.request.url:
-            headers=dict(flow.request.headers)
+            headers=parse.urlencode(dict(flow.request.headers))
             userId = flow.request.url.split('useridx=')[-1]
             result = session.query(HSZCOMPANY).filter_by(userId=userId).first()
             if result:
                 session.execute(
-                    'update {} set headers={} where userId = "{}" and state!=0'.format(
+                    'update {} set headers="{}" where userId = "{}" and state!=0'.format(
                         'hszcompany', headers, userId))
                 session.close()
+        else:
+            return
 
     def responseheaders(self, flow: mitmproxy.http.HTTPFlow):
         """

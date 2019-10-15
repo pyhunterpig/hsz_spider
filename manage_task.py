@@ -2,7 +2,7 @@
 import datetime
 
 from huey import SqliteHuey
-
+from urllib import parse
 from database.sql_test import session, HSZCOMPANY
 from downloader import Downloader
 down = Downloader()
@@ -13,14 +13,16 @@ huey = SqliteHuey(filename='./manage.db')
 # 除非大于本月或者不是才能入这里，所以当为本月的时候说明全部都采集完毕
 @huey.task(retries=1)
 def start_spider(userId):
+    print(userId)
     result = session.query(HSZCOMPANY).filter(HSZCOMPANY.userId == userId,
                                               HSZCOMPANY.eventuallykjqj != 0).all()
     headers = session.query(HSZCOMPANY).filter(HSZCOMPANY.userId == userId, HSZCOMPANY.headers != 0).first().headers
+    print(headers)
     for zt in result:
         url = 'https://sap.kungeek.com/portal/ftsp/portal/khxx.do?handleCustomer'
         data = {'ztZtxxId': zt.ztId, 'khxxId': zt.id_num}
         account_date = down.visit(url=url, response_container=['json', 'utf-8'], method='post', data=data,
-                                  headers=eval(headers))
+                                  headers=headers)
         if account_date.get('data', None):
             fwqxz = account_date['data']['fwqxz']
             startkjqj = account_date['data']['qyQj']
