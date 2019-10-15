@@ -40,8 +40,8 @@
       <file leaf-file-name="houtai.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/houtai.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="93">
-              <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+            <state relative-caret-position="598">
+              <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
               <folding>
                 <element signature="e#22#37#0" expanded="true" />
               </folding>
@@ -49,10 +49,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="manage_task.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="manage_task.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/manage_task.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="115">
+            <state relative-caret-position="-1737">
               <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
               <folding>
                 <element signature="e#24#39#0" expanded="true" />
@@ -84,14 +84,12 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="haha.py" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/haha.py">
+      <file leaf-file-name="hsz.js" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/hsz.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="149">
-              <caret line="25" column="94" lean-forward="false" selection-start-line="25" selection-start-column="94" selection-end-line="25" selection-end-column="94" />
-              <folding>
-                <element signature="e#0#57#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="0">
+              <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -145,9 +143,9 @@
       <find>win2</find>
       <find>dis</find>
       <find>task_start</find>
-      <find>useridx</find>
       <find>close</find>
       <find>able</find>
+      <find>useridx</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -192,7 +190,7 @@
     <detection-done>true</detection-done>
     <sorting>DEFINITION_ORDER</sorting>
   </component>
-  <component name="ProjectFrameBounds" extendedState="7">
+  <component name="ProjectFrameBounds" extendedState="6">
     <option name="x" value="-207" />
     <option name="y" value="106" />
     <option name="width" value="1372" />
@@ -396,7 +394,7 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-8" width="1382" height="744" extended-state="7" />
+    <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19062027" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -626,14 +624,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/hsz.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://D:/export_yiqidai_electron/index.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="207">
@@ -700,17 +690,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/manage_task.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="115">
-          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
-          <folding>
-            <element signature="e#24#39#0" expanded="true" />
-            <element signature="e#2267#2960#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/proxy_yct/middle_tool.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="356">
@@ -729,22 +708,39 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/haha.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="25" column="94" lean-forward="false" selection-start-line="25" selection-start-column="94" selection-end-line="25" selection-end-column="94" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/hsz.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/houtai.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="93">
-          <caret line="22" column="43" lean-forward="false" selection-start-line="22" selection-start-column="43" selection-end-line="22" selection-end-column="43" />
+        <state relative-caret-position="598">
+          <caret line="26" column="29" lean-forward="true" selection-start-line="26" selection-start-column="29" selection-end-line="26" selection-end-column="29" />
           <folding>
             <element signature="e#22#37#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/haha.py">
+    <entry file="file://$PROJECT_DIR$/manage_task.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="149">
-          <caret line="25" column="94" lean-forward="false" selection-start-line="25" selection-start-column="94" selection-end-line="25" selection-end-column="94" />
+        <state relative-caret-position="-1737">
+          <caret line="14" column="25" lean-forward="true" selection-start-line="14" selection-start-column="25" selection-end-line="14" selection-end-column="25" />
           <folding>
-            <element signature="e#0#57#0" expanded="true" />
+            <element signature="e#24#39#0" expanded="true" />
+            <element signature="e#2267#2960#0" expanded="false" />
           </folding>
         </state>
       </provider>
