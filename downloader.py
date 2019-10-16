@@ -42,8 +42,9 @@ class Downloader():
                     else:
                         response_body = self.session.post(url, timeout=30, headers=headers, verify=False,
                                                           params=payload, cookies=cookies,files=files,data=data)
-                        print(payload,'i am payload haha',type(payload))
-                        print(files,'i am files haha',type(files))
+                        # print(response_body.json())
+                        # print(payload,'i am payload haha',type(payload))
+                        # print(files,'i am files haha',type(files))
 
                         response_body.raise_for_status()
                     self.CONNECTION = False

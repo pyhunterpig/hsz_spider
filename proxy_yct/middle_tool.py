@@ -62,17 +62,19 @@ class Proxy(classification_deal):
         """
             The full HTTP request has been read.
         """
-        # request_header=eval(dict(flow.request.headers)['request_header'])
         '''获取请求详细信息'''
-        print(flow.request.url,'好累啊')
-        if 'useridx' in flow.request.url:
-            headers=parse.urlencode(dict(flow.request.headers))
-            userId = flow.request.url.split('useridx=')[-1]
+        x='https://sap.kungeek.com/portal/ftsp/portal/form.do?getAllCustomers&useridx=4E06FEE71A5E4AA393F509DB16BC8A32&token=23dd4072-3ed3-4b11-989e-ca35ca8407da'
+
+        if 'useridx' in flow.request.url and 'token' in flow.request.url:
+            token=flow.request.url.split('token=')[-1]
+            parameter=dict(flow.request.headers)
+            parameter.update({'X-CSRF-TOKEN':token})
+            headers=parse.urlencode(parameter)
+            userId = flow.request.url.split('useridx=')[-1].split('&')[0]
             result = session.query(HSZCOMPANY).filter_by(userId=userId).first()
             if result:
-                session.execute(
-                    'update {} set headers="{}" where userId = "{}" and state!=0'.format(
-                        'hszcompany', headers, userId))
+                print(headers)
+                session.execute('update {} set headers="{}" where userId = "{}" and usereventually!=0'.format('hszcompany', headers, userId))
                 session.close()
         else:
             return
@@ -88,60 +90,6 @@ class Proxy(classification_deal):
         """
             The full HTTP response has been read.
         """
-        # response_header = eval(dict(flow.response.headers)['response_header'])
-        # # '''解码图片'''
-        # # if flow.response.headers['Content-Type'].startswith('image/'):
-        # #     with open(r'C:\Users\xh\proxy_yct\csdn-kf.png', 'wb') as f:
-        # #         f.write(flow.response.content)
-        # connect = filter_info['http_connect']
-        # data_dict = {}
-        # for i in connect:
-        #     url_res = flow.request.url
-        #     #print(url_res,'i am url_res')
-        #     if i in url_res and 'x=11' not in url_res and 'x=14' not in url_res and 'x=15' not in url_res:
-        #         data_dict = self.yct_dealdatabag(flow)
-        #         break
-        #     else:
-        #         # data_dict = self.other_dealdatabag(flow)
-        #         continue
-        # if data_dict:
-        #     pickled = pickle.dumps(data_dict)
-        #     data_str = str(pickled)
-
-        # def other_dealdatabag(self,flow):
-        #     data_bag = {}
-        #     # data_bag['client_address'] = flow.client_conn.address
-        #     data_bag['request'] = flow.request
-        #     data_bag['time_circle'] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
-        #     data_bag['web_name'] = flow.request.host
-        #     # data_bag['refer']=flow.request.headers.get('Referer','')
-        #     data_bag['to_server'] = flow.request.url
-        #     data_bag['response'] = flow.response
-        #     data_bag['customer_id'] = ''
-        #     return data_bag
-        #
-        # def yct_dealdatabag(self, flow):
-        # data_bag = {}
-        # # data_bag['client_address'] = flow.client_conn.address
-        # # data_bag['request'] = flow.request
-        # # data_bag['time_circle'] = time.strftime('%Y-%m-%d %H:%M:%S', time.localtime(time.time()))
-        # data_bag['web_name'] = 'yct_gz'
-        # data_bag['refer'] = flow.request.headers.get('Referer', '')
-        # data_bag['to_server'] = flow.request.url
-        # # data_bag['response'] = flow.response
-        # data_bag['response_text'] = flow.response.get_text
-        # # data_bag['customer_id'] = ''
-        # return data_bag
-        #
-        #
-        # def run_celery(self,data_str):
-        #     #这个地方调用任务to_product
-        #     handle_data(data_str)
-        # folder=open(r'D:\data_bag_pickle\{}.pkl'.format(time.time()),mode='wb')
-        # pickle.dump(data_bag,folder)
-        # folder.close()
-
-        # print(res)
 
     def error(self, flow: mitmproxy.http.HTTPFlow):
         """
